@@ -117,4 +117,33 @@ console.log(sumAge)
 console.log(avgAge)
 
 
-/Part 2
+//Part 3
+let obj = {
+  name: 'Jack', 
+  job: 'accounting',
+  age: 21
+}
+
+function ageChange(obj) {
+  if (!obj.hasOwnProperty('age')){
+    obj.age = 0;
+  } else {
+    obj.age++;
+  }
+  console.log(obj)
+}
+ageChange(obj)
+
+const objClone = structuredClone(obj);
+
+function cloneChange(objClone){
+  if (!objClone.hasOwnProperty('age')) {
+    objClone.age = 0;
+  } else {
+    objClone.age++;
+  }
+  console.log(objClone)
+}
+
+cloneChange(objClone)
+
